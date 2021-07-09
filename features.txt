@@ -1,0 +1,11 @@
+visa_electron.v1.0 Visa electron implemented
+visa_classic.v1.0 Visa classic implemented
+visa_gold.v1.0 Visa gold implemented
+
+mastercard_mastercard.v1.0 Mastercard Mastercard implemented
+mastercard_electronic.v1.0 Mastercard Electronic implemented
+mastercard_maestro.v1.0 Mastercard Maestro implemented
+
+mir_classic.v1.0 Mir Classic implemented
+mir_premium.v1.0 Mir Premium implemented
+mir_debet.v1.0 Mir Debet implemented
