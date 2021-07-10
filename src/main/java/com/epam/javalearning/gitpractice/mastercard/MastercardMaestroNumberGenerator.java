@@ -5,7 +5,7 @@ import com.epam.javalearning.gitpractice.AbstractCardNumberGenerator;
 public class MastercardMaestroNumberGenerator
         extends AbstractCardNumberGenerator {
 
-    private static final String PREFIX = "2223";
+    private static final String PREFIX = "2224";
 
     public MastercardMaestroNumberGenerator() {
     }
