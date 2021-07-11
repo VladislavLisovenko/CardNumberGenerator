@@ -3,12 +3,16 @@ package com.epam.javalearning.gitpractice;
 import com.epam.javalearning.gitpractice.mastercard.MastercardCardNumberGeneratorBuilder;
 import com.epam.javalearning.gitpractice.mir.MirCardNumberGeneratorBuilder;
 import com.epam.javalearning.gitpractice.visa.VisaCardNumberGeneratorBuilder;
+import org.apache.log4j.Logger;
 
 public final class CardNumberGeneratorExecutor {
 
     private static final String VISA_PAYMENT_SYSTEM = "visa";
     private static final String MASTERCARD_PAYMENT_SYSTEM = "mastercard";
     private static final String MIR_PAYMENT_SYSTEM = "mir";
+
+    private static final Logger LOGGER =
+            Logger.getLogger(CardNumberGeneratorExecutor.class.getName());
 
     private CardNumberGeneratorExecutor() {
     }
@@ -26,7 +30,7 @@ public final class CardNumberGeneratorExecutor {
                         .getCardNumberGenerator(cardType);
                 System.out.println(cardNumberGenerator.getNextCardNumber());
             } catch (WrongCardTypeException exception) {
-                System.out.println(exception.getMessage());
+                LOGGER.info(exception);
             }
 
         } else if (MASTERCARD_PAYMENT_SYSTEM.equals(paymentSystem)) {
@@ -36,7 +40,7 @@ public final class CardNumberGeneratorExecutor {
                         .getCardNumberGenerator(cardType);
                 System.out.println(cardNumberGenerator.getNextCardNumber());
             } catch (WrongCardTypeException exception) {
-                System.out.println(exception.getMessage());
+                LOGGER.info(exception);
             }
 
         } else if (MIR_PAYMENT_SYSTEM.equals(paymentSystem)) {
@@ -46,11 +50,11 @@ public final class CardNumberGeneratorExecutor {
                         .getCardNumberGenerator(cardType);
                 System.out.println(cardNumberGenerator.getNextCardNumber());
             } catch (WrongCardTypeException exception) {
-                System.out.println(exception.getMessage());
+                LOGGER.info(exception);
             }
 
         } else {
-            System.out.println("Wrong Payment System entered");
+            LOGGER.info("Wrong Payment System entered");
         }
 
     }
